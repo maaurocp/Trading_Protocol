@@ -1,0 +1,19 @@
+,file,exists,rows,columns,date_min,date_max,index_duplicates,nans_per_column,total_nans,inferred_freq,median_delta_days,source,output_name,native_freq
+0,yf_SPY.csv,True,8314,"['Adj Close', 'Capital Gains', 'Close', 'Dividends', 'High', 'Low', 'Open', 'Stock Splits', 'Volume']",1993-01-29,2026-02-09,0,"{'Adj Close': 0, 'Capital Gains': 0, 'Close': 0, 'Dividends': 0, 'High': 0, 'Low': 0, 'Open': 0, 'Stock Splits': 0, 'Volume': 0}",0,,1,yfinance,SPY,
+1,yf_VIX.csv,True,9093,"['Adj Close', 'Close', 'Dividends', 'High', 'Low', 'Open', 'Stock Splits', 'Volume']",1990-01-02,2026-02-09,0,"{'Adj Close': 0, 'Close': 0, 'Dividends': 0, 'High': 0, 'Low': 0, 'Open': 0, 'Stock Splits': 0, 'Volume': 0}",0,,1,yfinance,VIX,
+2,yf_TLT.csv,True,5921,"['Adj Close', 'Capital Gains', 'Close', 'Dividends', 'High', 'Low', 'Open', 'Stock Splits', 'Volume']",2002-07-30,2026-02-09,0,"{'Adj Close': 0, 'Capital Gains': 0, 'Close': 0, 'Dividends': 0, 'High': 0, 'Low': 0, 'Open': 0, 'Stock Splits': 0, 'Volume': 0}",0,,1,yfinance,TLT,
+3,yf_TIP.csv,True,5579,"['Adj Close', 'Capital Gains', 'Close', 'Dividends', 'High', 'Low', 'Open', 'Stock Splits', 'Volume']",2003-12-05,2026-02-09,0,"{'Adj Close': 0, 'Capital Gains': 0, 'Close': 0, 'Dividends': 0, 'High': 0, 'Low': 0, 'Open': 0, 'Stock Splits': 0, 'Volume': 0}",0,,1,yfinance,TIP,
+4,yf_LQD.csv,True,5921,"['Adj Close', 'Capital Gains', 'Close', 'Dividends', 'High', 'Low', 'Open', 'Stock Splits', 'Volume']",2002-07-30,2026-02-09,0,"{'Adj Close': 0, 'Capital Gains': 0, 'Close': 0, 'Dividends': 0, 'High': 0, 'Low': 0, 'Open': 0, 'Stock Splits': 0, 'Volume': 0}",0,,1,yfinance,LQD,
+5,yf_HYG.csv,True,4739,"['Adj Close', 'Capital Gains', 'Close', 'Dividends', 'High', 'Low', 'Open', 'Stock Splits', 'Volume']",2007-04-11,2026-02-09,0,"{'Adj Close': 0, 'Capital Gains': 0, 'Close': 0, 'Dividends': 0, 'High': 0, 'Low': 0, 'Open': 0, 'Stock Splits': 0, 'Volume': 0}",0,,1,yfinance,HYG,
+6,yf_GLD.csv,True,5339,"['Adj Close', 'Capital Gains', 'Close', 'Dividends', 'High', 'Low', 'Open', 'Stock Splits', 'Volume']",2004-11-18,2026-02-09,0,"{'Adj Close': 0, 'Capital Gains': 0, 'Close': 0, 'Dividends': 0, 'High': 0, 'Low': 0, 'Open': 0, 'Stock Splits': 0, 'Volume': 0}",0,,1,yfinance,GLD,
+7,fred_CPIAUCSL.csv,True,432,['CPIAUCSL'],1990-01-01,2025-12-01,0,{'CPIAUCSL': 1},1,MS,31,FRED,CPI,monthly
+8,fred_UNRATE.csv,True,432,['UNRATE'],1990-01-01,2025-12-01,0,{'UNRATE': 1},1,MS,31,FRED,UNRATE,monthly
+9,fred_FEDFUNDS.csv,True,433,['FEDFUNDS'],1990-01-01,2026-01-01,0,{'FEDFUNDS': 0},0,MS,31,FRED,FEDFUNDS,monthly
+10,fred_DFF.csv,True,13186,['DFF'],1990-01-01,2026-02-06,0,{'DFF': 0},0,D,1,FRED,DFF,daily
+11,fred_T10Y2Y.csv,True,9421,['T10Y2Y'],1990-01-01,2026-02-09,0,{'T10Y2Y': 390},390,B,1,FRED,T10Y2Y,daily
+12,fred_GS10.csv,True,433,['GS10'],1990-01-01,2026-01-01,0,{'GS10': 0},0,MS,31,FRED,GS10,monthly
+13,fred_GS2.csv,True,433,['GS2'],1990-01-01,2026-01-01,0,{'GS2': 0},0,MS,31,FRED,GS2,monthly
+14,fred_INDPRO.csv,True,432,['INDPRO'],1990-01-01,2025-12-01,0,{'INDPRO': 0},0,MS,31,FRED,INDPRO,monthly
+15,fred_USREC.csv,True,433,['USREC'],1990-01-01,2026-01-01,0,{'USREC': 0},0,MS,31,FRED,USREC,monthly
+16,fred_T10YIE.csv,True,6028,['T10YIE'],2003-01-02,2026-02-09,0,{'T10YIE': 249},249,B,1,FRED,T10YIE,daily
+17,fred_BAMLH0A0HYM2.csv,True,7693,['BAMLH0A0HYM2'],1996-12-31,2026-02-06,0,{'BAMLH0A0HYM2': 94},94,,1,FRED,HY_OAS,daily

@@ -1,0 +1,312 @@
+Perfecto. Te hago una **estructura de trabajo ordenada**, tipo roadmap, sin humo, sin “y luego ya veremos”. Esto es lo que seguiría alguien que quiere que el proyecto **sobreviva al contacto con la realidad**.
+
+Voy por fases. Cada fase tiene **objetivo**, **qué se hace** y **qué sale de ahí**. Nada místico.
+
+---
+
+## FASE 0. Definición del marco (antes de tocar datos)
+
+Sí, esto va antes de descargar nada. Sí, la gente se lo salta. Luego lloran.
+
+**Objetivo**
+
+* Dejar claro qué problema resuelve el algoritmo y qué NO.
+
+**Tareas**
+
+* Definir benchmark: S&P 500 total return
+* Definir horizonte: largo plazo (mensual / semanal)
+* Definir reglas duras:
+
+  * 70% siempre invertido
+  * 30% táctico con escalones, no binario
+* Definir métricas de éxito:
+
+  * Drawdown
+  * Volatilidad
+  * CVaR
+  * Sharpe / Sortino
+  * Retorno relativo vs benchmark
+
+**Salida**
+
+* Documento de especificación
+* Nada de código aún
+
+---
+
+## FASE 1. Adquisición de datos
+
+Aquí empieza el barro.
+
+**Objetivo**
+
+* Obtener datos consistentes, reproducibles y con fechas bien alineadas.
+
+**Tareas**
+
+* Descargar precios ajustados del S&P 500 (ETF)
+* Descargar datos de volatilidad
+* Descargar proxies macroeconómicos
+* Guardar datos en bruto, sin tocar
+
+**Buenas prácticas**
+
+* Todo con timestamps
+* Nada de forward-fill alegre
+* Separar datos de mercado y macro
+
+**Salida**
+
+* Carpeta `/data/raw`
+* Scripts de descarga reproducibles
+
+---
+
+## FASE 2. Limpieza y preparación de datos
+
+Aquí es donde se evita el mining bias.
+
+**Objetivo**
+
+* Convertir datos brutos en series utilizables sin mirar al futuro.
+
+**Tareas**
+
+* Sincronizar frecuencias (mensual/semanal)
+* Eliminar NaNs correctamente
+* Normalizar escalas cuando haga falta
+* Crear versiones laggeadas de indicadores
+
+**Reglas sagradas**
+
+* Nada usa información del mismo periodo para decidir
+* Todo indicador está desplazado en el tiempo
+
+**Salida**
+
+* `/data/processed`
+* Dataset listo para señales
+
+---
+
+## FASE 3. Definición de indicadores
+
+No 50. Pocos y justificados.
+
+**Objetivo**
+
+* Extraer señales que tengan sentido económico, no decorativo.
+
+**Tareas**
+
+* Implementar indicadores:
+
+  * Tendencia
+  * Volatilidad
+  * Valoración (proxies)
+  * Stress de mercado
+* Documentar qué mide cada uno y por qué debería importar
+
+**Salida**
+
+* Módulo `indicators.py`
+* Tabla de indicadores por fecha
+
+---
+
+## FASE 4. Definición de contextos / regímenes
+
+Aquí está el corazón del proyecto.
+
+**Objetivo**
+
+* Traducir indicadores continuos en estados discretos del mercado.
+
+**Tareas**
+
+* Definir reglas o clustering para:
+
+  * Contexto positivo
+  * Contexto neutral
+  * Contexto negativo
+* Validar estabilidad de los regímenes en el tiempo
+
+**Importante**
+
+* Los regímenes no deben cambiar cada mes como un adolescente de humor
+
+**Salida**
+
+* Serie temporal de “contexto de mercado”
+* Módulo `regimes.py`
+
+---
+
+## FASE 5. Motor de decisiones
+
+Aquí el algoritmo deja de ser descriptivo y pasa a opinar.
+
+**Objetivo**
+
+* Convertir contexto en acciones sobre el 30%.
+
+**Tareas**
+
+* Definir reglas de asignación:
+
+  * % invertido según régimen
+  * Velocidad de cambio
+* Evitar overtrading
+* Implementar lógica clara y legible
+
+**Salida**
+
+* Señales de:
+
+  * aumentar exposición
+  * reducir exposición
+  * mantener
+* Módulo `strategy.py`
+
+---
+
+## FASE 6. Backtesting
+
+La fase donde el ego muere o madura.
+
+**Objetivo**
+
+* Evaluar el comportamiento histórico sin trampas.
+
+**Tareas**
+
+* Simular cartera completa (70/30)
+* Incluir costes de transacción razonables
+* Comparar contra benchmark
+* Analizar por subperiodos (crisis vs expansión)
+
+**Métricas clave**
+
+* Max drawdown
+* Volatilidad
+* Retorno anualizado
+* Sharpe / Sortino
+* % tiempo invertido
+
+**Salida**
+
+* Resultados numéricos
+* Gráficos
+* Módulo `backtest.py`
+
+---
+
+## FASE 7. Análisis de robustez
+
+Donde se separa el modelo serio del frágil.
+
+**Objetivo**
+
+* Ver si el modelo depende de magia fina.
+
+**Tareas**
+
+* Cambiar parámetros ligeramente
+* Probar ventanas temporales distintas
+* Quitar indicadores uno a uno
+* Monte Carlo sobre retornos
+
+**Salida**
+
+* Informe de sensibilidad
+* Conclusiones incómodas pero útiles
+
+---
+
+## FASE 8. Sistema de notificaciones
+
+Parte práctica, no académica.
+
+**Objetivo**
+
+* Traducir señales en avisos humanos.
+
+**Tareas**
+
+* Generar alertas claras:
+
+  * qué hacer
+  * por qué
+  * en qué contexto
+* Nada de “confianza 93%”
+
+**Salida**
+
+* Módulo `alerts.py`
+* Mensajes legibles
+
+---
+
+## FASE 9. Documentación y conclusiones
+
+Donde explicas por qué esto no es magia.
+
+**Objetivo**
+
+* Dejar el proyecto defendible ante terceros.
+
+**Tareas**
+
+* Explicar:
+
+  * qué funciona
+  * qué no
+  * cuándo falla
+* Comparar contra buy & hold
+* Reconocer limitaciones
+
+**Salida**
+
+* Informe final
+* README serio
+
+---
+
+## Estructura de carpetas sugerida
+
+```
+project/
+│
+├── data/
+│   ├── raw/
+│   └── processed/
+│
+├── src/
+│   ├── data_loader.py
+│   ├── preprocessing.py
+│   ├── indicators.py
+│   ├── regimes.py
+│   ├── strategy.py
+│   ├── backtest.py
+│   └── alerts.py
+│
+├── notebooks/
+├── results/
+└── README.md
+```
+
+---
+
+### Cierre honesto
+
+Si sigues **este orden**, el proyecto:
+
+* No se te desmadra
+* No se convierte en curve fitting
+* Es ampliable
+* Es defendible ante alguien que sepa finanzas
+
+Si te saltas fases, el mercado se ríe de ti en silencio. Y luego pasa la factura.
+
+Siguiente paso lógico: **definir exactamente qué datos vas a usar en la Fase 1** y con qué frecuencia.

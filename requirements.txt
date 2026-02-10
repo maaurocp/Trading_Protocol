@@ -1,0 +1,4 @@
+yfinance>=0.2.31
+fredapi>=0.5.1
+pandas>=2.0.0
+pyarrow>=14.0.0
