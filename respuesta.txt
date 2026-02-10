@@ -308,5 +308,3 @@ Si sigues **este orden**, el proyecto:
 * Es defendible ante alguien que sepa finanzas
 
 Si te saltas fases, el mercado se ríe de ti en silencio. Y luego pasa la factura.
-
-Siguiente paso lógico: **definir exactamente qué datos vas a usar en la Fase 1** y con qué frecuencia.
