@@ -1,0 +1,19 @@
+{
+  "name": "yenko",
+  "indicators": [
+    "vol_realized_12m"
+  ],
+  "logic_type": "zscore_composite",
+  "parameters": {
+    "directions": {
+      "vol_realized_12m": 1
+    },
+    "threshold_buy": 1.0,
+    "threshold_sell": -1.0,
+    "min_periods": 24
+  },
+  "description": "Prueba sin haber backtesting",
+  "created_at": "2026-02-11T17:38:44",
+  "n_indicators": 1,
+  "associated_regime": "macro"
+}
