@@ -2,13 +2,23 @@ Sistema de Asignación Dinámica para Inversión en el S&P 500
 
 Introducción y marco conceptual
 
+<<<<<<< HEAD
 Motivación y contexto La inversión pasiva en índices amplios como el S&P 500 ha demostrado, a largo plazo, ser una estrategia eficiente para capturar el crecimiento económico agregado. Sin embargo, esta aproximación presenta una limitación estructural clara: expone al inversor de forma constante y completa a los ciclos de mercado, incluidos periodos prolongados de alta volatilidad, correcciones profundas y drawdowns significativos.
+=======
+Motivación y contexto
+La inversión pasiva en índices amplios como el S&P 500 ha demostrado, a largo plazo, ser una estrategia eficiente para capturar el crecimiento económico agregado. Sin embargo, esta aproximación presenta una limitación estructural clara: expone al inversor de forma constante y completa a los ciclos de mercado, incluidos periodos prolongados de alta volatilidad, correcciones profundas y drawdowns significativos.
+>>>>>>> 1b299144b99b43bda23f47ba1ca807557d5119b4
 
 Desde una perspectiva de gestión de riesgos, el problema no reside únicamente en la rentabilidad media, sino en la trayectoria del capital: volatilidad, pérdidas acumuladas, duración de las recuperaciones y estabilidad del perfil riesgo-retorno. En contextos de estrés macroeconómico o financiero, una asignación completamente pasiva puede generar pérdidas difíciles de tolerar para muchos perfiles de inversor, incluso cuando el horizonte temporal es largo.
 
 Este proyecto surge de la necesidad de explorar enfoques intermedios entre la pasividad absoluta y la gestión activa tradicional, evitando tanto la complejidad excesiva como la pretensión de anticipar el mercado. El foco no está en “batir al índice” de forma sistemática, sino en gestionar mejor la exposición al riesgo sin renunciar al crecimiento estructural del mercado.
 
+<<<<<<< HEAD
 Objetivo del proyecto El objetivo del proyecto es desarrollar y analizar un sistema de asignación dinámica que complemente una inversión pasiva en el S&P 500 mediante una gestión táctica y no automática de una fracción limitada del capital.
+=======
+Objetivo del proyecto
+El objetivo del proyecto es desarrollar y analizar un sistema de asignación dinámica que complemente una inversión pasiva en el S&P 500 mediante una gestión táctica y no automática de una fracción limitada del capital.
+>>>>>>> 1b299144b99b43bda23f47ba1ca807557d5119b4
 
 Concretamente, el sistema busca:
 
@@ -22,7 +32,12 @@ Evaluar si esta aproximación permite mejorar el perfil riesgo-retorno, principa
 
 El proyecto se plantea con un enfoque académico, orientado al análisis y la validación empírica, no a la explotación comercial ni a la operativa en tiempo real.
 
+<<<<<<< HEAD
 Qué hace realmente el sistema El sistema analiza periódicamente (frecuencia semanal o mensual) un conjunto de indicadores de mercado y macroeconómicos para:
+=======
+Qué hace realmente el sistema
+El sistema analiza periódicamente (frecuencia semanal o mensual) un conjunto de indicadores de mercado y macroeconómicos para:
+>>>>>>> 1b299144b99b43bda23f47ba1ca807557d5119b4
 
 Evaluar el estado del entorno financiero.
 
@@ -40,7 +55,12 @@ Reasignar temporalmente hacia activos defensivos o liquidez (conceptualmente).
 
 Es importante destacar que el sistema no ejecuta operaciones, ni gestiona órdenes, ni interactúa con mercados financieros. Su salida es puramente analítica y está diseñada para apoyar decisiones humanas, no para sustituirlas.
 
+<<<<<<< HEAD
 Qué NO hace el sistema Para evitar ambigüedades, es fundamental aclarar explícitamente las capacidades y límites del sistema:
+=======
+Qué NO hace el sistema
+Para evitar ambigüedades, es fundamental aclarar explícitamente las capacidades y límites del sistema:
+>>>>>>> 1b299144b99b43bda23f47ba1ca807557d5119b4
 
 No predice precios futuros ni intenta anticipar movimientos de corto plazo.
 
@@ -56,7 +76,12 @@ No sustituye el criterio del inversor ni el análisis cualitativo.
 
 El sistema no debe interpretarse como una herramienta de predicción, sino como un marco sistemático de evaluación del riesgo relativo.
 
+<<<<<<< HEAD
 Enfoque metodológico El enfoque metodológico combina principios de:
+=======
+Enfoque metodológico
+El enfoque metodológico combina principios de:
+>>>>>>> 1b299144b99b43bda23f47ba1ca807557d5119b4
 
 Asignación estratégica y táctica de activos.
 
@@ -70,7 +95,12 @@ La lógica subyacente es que el riesgo no es constante en el tiempo, y que exist
 
 El diseño evita modelos excesivamente complejos o difíciles de interpretar. La prioridad se da a la robustez, estabilidad y explicabilidad frente a la optimización extrema.
 
+<<<<<<< HEAD
 Métricas de evaluación La evaluación del sistema se realiza utilizando métricas centradas en el riesgo, no únicamente en la rentabilidad:
+=======
+Métricas de evaluación
+La evaluación del sistema se realiza utilizando métricas centradas en el riesgo, no únicamente en la rentabilidad:
+>>>>>>> 1b299144b99b43bda23f47ba1ca807557d5119b4
 
 Volatilidad anualizada.
 
@@ -88,7 +118,12 @@ Comparación con una estrategia pasiva pura (benchmark).
 
 El análisis se basa en series históricas y tiene como objetivo evaluar comportamientos agregados, no resultados puntuales.
 
+<<<<<<< HEAD
 Resultados esperados (realistas) De forma realista, no se espera que el sistema:
+=======
+Resultados esperados (realistas)
+De forma realista, no se espera que el sistema:
+>>>>>>> 1b299144b99b43bda23f47ba1ca807557d5119b4
 
 Supere consistentemente al S&P 500 en rentabilidad absoluta.
 
@@ -108,7 +143,12 @@ Mayor coherencia entre el horizonte de inversión y la tolerancia al riesgo.
 
 Cualquier mejora en la rentabilidad ajustada al riesgo se considera un resultado positivo, incluso si la rentabilidad bruta es similar o ligeramente inferior a la del índice.
 
+<<<<<<< HEAD
 Valor del proyecto Desde el punto de vista académico, el proyecto aporta:
+=======
+Valor del proyecto
+Desde el punto de vista académico, el proyecto aporta:
+>>>>>>> 1b299144b99b43bda23f47ba1ca807557d5119b4
 
 Un marco claro para estudiar asignación dinámica sin recurrir a trading.
 
@@ -126,6 +166,13 @@ Demuestra que la gestión del riesgo puede abordarse de forma sistemática sin c
 
 El valor principal del proyecto no está en la sofisticación técnica, sino en la coherencia metodológica y la honestidad en sus objetivos.
 
+<<<<<<< HEAD
 Conclusión Este proyecto no pretende redefinir la inversión en índices ni ofrecer soluciones definitivas a la gestión del riesgo. Su propósito es explorar de forma rigurosa y crítica si una asignación dinámica limitada, aplicada con disciplina y sin pretensiones predictivas, puede mejorar la experiencia de inversión a largo plazo.
 
 El sistema se sitúa deliberadamente en un punto intermedio entre la pasividad total y la gestión activa tradicional, priorizando la estabilidad, la transparencia y el control del riesgo. En ese equilibrio reside tanto su principal fortaleza como su principal limitación.
+=======
+Conclusión
+Este proyecto no pretende redefinir la inversión en índices ni ofrecer soluciones definitivas a la gestión del riesgo. Su propósito es explorar de forma rigurosa y crítica si una asignación dinámica limitada, aplicada con disciplina y sin pretensiones predictivas, puede mejorar la experiencia de inversión a largo plazo.
+
+El sistema se sitúa deliberadamente en un punto intermedio entre la pasividad total y la gestión activa tradicional, priorizando la estabilidad, la transparencia y el control del riesgo. En ese equilibrio reside tanto su principal fortaleza como su principal limitación.
+>>>>>>> 1b299144b99b43bda23f47ba1ca807557d5119b4
